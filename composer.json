@@ -1,6 +1,6 @@
 {
     "name": "vintagesucks/twig-renderer",
-    "description": "Twig renderer for the Yii Framework.",
+    "description": "Twig 2.x for Yii 1.x",
     "keywords": ["yii", "extension", "twig", "renderer"],
     "homepage": "https://github.com/vintagesucks/twig-renderer",
     "type": "yii-extension",
