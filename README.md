@@ -1,6 +1,6 @@
 # Twig view renderer
 
-This extension allows you to use [Twig 2.x](http://twig.sensiolabs.org) templates in Yii 1
+This extension allows you to use [Twig 2.x](https://twig.symfony.com/) templates in Yii 1
 
 ## Requirements
 * Yii 1.1 or above
