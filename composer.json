@@ -1,5 +1,5 @@
 {
-    "name": "yiiext/twig-renderer",
+    "name": "vintagesucks/twig-renderer",
     "description": "Twig renderer for the Yii Framework.",
     "keywords": ["yii", "extension", "twig", "renderer"],
     "homepage": "https://github.com/yiiext/twig-renderer",
@@ -10,9 +10,13 @@
             "name": "Alexander Makarov",
             "email": "sam@rmcreative.ru"
         }
+        {
+            "name": "Nikolas Evers",
+            "email": "hello@nikol.as"
+        }
     ],
     "require": {
-        "php": ">=5.1.0",
-        "twig/twig": "1.*"
+        "php": ">=7.1.0",
+        "twig/twig": "^2.5.0"
     }
 }
