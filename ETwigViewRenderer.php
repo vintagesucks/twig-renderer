@@ -4,10 +4,11 @@
  *
  * @author Leonid Svyatov <leonid@svyatov.ru>
  * @author Alexander Makarov <sam@rmcreative.ru>
- * @link http://github.com/yiiext/twig-renderer
+ * @author Nikolas Evers <hello@nikol.as>
+ * @link https://github.com/vintagesucks/twig-renderer
  * @link http://twig.sensiolabs.org
  *
- * @version 1.1.15
+ * @version 2.0.0
  */
 class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
 {
@@ -21,7 +22,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
     public $fileExtension = '.twig';
     /**
       * @var array Twig environment options
-      * @see http://twig.sensiolabs.org/doc/api.html#environment-options
+      * @see https://twig.symfony.com/doc/2.x/api.html#environment-options
       */
     public $options = array();
     /**
@@ -52,7 +53,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
     public $extensions = array();
     /**
      * @var array Twig lexer options
-     * @see http://twig.sensiolabs.org/doc/recipes.html#customizing-the-syntax
+     * @see https://twig.symfony.com/doc/2.x/recipes.html#customizing-the-syntax
      * Example: Smarty-like syntax
      * array(
      *     'tag_comment'  => array('{*', '*}'),
