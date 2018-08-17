@@ -1,5 +1,5 @@
 # Twig view renderer
-![Packagist](https://img.shields.io/packagist/v/vintagesucks/twig-renderer.svg) ![Packagist](https://img.shields.io/packagist/dt/vintagesucks/twig-renderer.svg)
+[![Packagist](https://img.shields.io/packagist/v/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer) [![Packagist](https://img.shields.io/packagist/dt/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer)
 
 This extension allows you to use [Twig 2.x](https://twig.symfony.com/) templates in Yii 1
 
