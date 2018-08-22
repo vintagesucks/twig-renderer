@@ -6,7 +6,7 @@
  * @author Alexander Makarov <sam@rmcreative.ru>
  * @author Nikolas Evers <hello@nikol.as>
  * @link https://github.com/vintagesucks/twig-renderer
- * @link http://twig.sensiolabs.org
+ * @link https://twig.symfony.com/
  *
  * @version 2.0.0
  */
