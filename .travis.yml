@@ -14,8 +14,8 @@ script:
   - php -r "if (!is_dir ('./test/vendor/vintagesucks')) { mkdir('./test/vendor/vintagesucks', 0755, true); }"
   - php -r "if (!is_dir ('./test/vendor/vintagesucks/twig-renderer')) { mkdir('./test/vendor/vintagesucks/twig-renderer', 0755, true); }"
   - php -r "copy('ETwigViewRenderer.php', 'test/vendor/vintagesucks/twig-renderer/ETwigViewRenderer.php');"
-  - cd test && php -r test/index.php > index.html && ls
-  - ls
+  - cd test && php -r test/index.php > index.html
+  - cat index.html
   - php -r "if (file_get_contents('index.html') !== 'HELLO WORLD') { throw new Exception(file_get_contents('index.html')); };"
 
 cache:
