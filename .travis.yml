@@ -16,7 +16,7 @@ script:
   - php -r "copy('ETwigViewRenderer.php', 'test/vendor/vintagesucks/twig-renderer/ETwigViewRenderer.php');"
   - php -S localhost:8000 -t ./test &
   - wget localhost:8000
-  - php -r "if (file_get_contents('index.html') !== 'HELLO WORLD') { throw new Exception('index.html: ' . file_get_contents('index.html')); };"
+  - php -r "if (file_get_contents('index.html') !== 'HELLO WORLD') { throw new Exception(file_get_contents('index.html')); };"
 
 cache:
   directories:
