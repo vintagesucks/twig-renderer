@@ -2,8 +2,8 @@
 
 class SiteController extends CController
 {
-	public function actionIndex()
-	{
-		$this->render('hello-world');
-	}
+    public function actionIndex()
+    {
+        $this->render('hello-world');
+    }
 }
