@@ -25,7 +25,7 @@ This extension allows you to use [Twig 3.x](https://twig.symfony.com/) templates
 ```
 
 ### Usage
-* See [Twig syntax](https://twig.symfony.com/doc/2.x/templates.html)
+* See [Twig syntax](https://twig.symfony.com/doc/3.x/templates.html)
 * Current controller properties are accessible via `{{ this.pageTitle }}`
 * `Yii::app()` object is accessible via `{{ App }}` (Example: `{{ App.name }}`)
 * Yii's core static classes (CHtml, for example) are accessible via `{{ C.ClassNameWithoutFirstC.Method }}` (Example: `{{ C.Html.textField(name,'value') }}`)
