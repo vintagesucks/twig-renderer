@@ -2,11 +2,11 @@
 
 [![Build](https://api.travis-ci.com/vintagesucks/twig-renderer.svg?branch=master)](https://travis-ci.com/vintagesucks/twig-renderer) [![Packagist](https://img.shields.io/packagist/v/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer) [![Packagist](https://img.shields.io/packagist/dt/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer)
 
-This extension allows you to use [Twig 2.x](https://twig.symfony.com/) templates in Yii 1
+This extension allows you to use [Twig 3.x](https://twig.symfony.com/) templates in Yii 1
 
 ## Requirements
 * Yii 1.1 or above
-* PHP 7.0 or above
+* PHP 7.2 or above
 
 ## Installing
 

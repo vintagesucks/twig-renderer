@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'WORLD',
     'components' => [
         'viewRenderer' => [
             'class' => 'root.vendor.vintagesucks.twig-renderer.ETwigViewRenderer',

@@ -8,7 +8,7 @@
  * @link https://github.com/vintagesucks/twig-renderer
  * @link https://twig.symfony.com/
  *
- * @version 2.0.0
+ * @version 3.0.0
  */
 class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
 {
@@ -22,7 +22,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
     public $fileExtension = '.twig';
     /**
       * @var array Twig environment options
-      * @see https://twig.symfony.com/doc/2.x/api.html#environment-options
+      * @see https://twig.symfony.com/doc/3.x/api.html#environment-options
       */
     public $options = array();
     /**
@@ -53,7 +53,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
     public $extensions = array();
     /**
      * @var array Twig lexer options
-     * @see https://twig.symfony.com/doc/2.x/recipes.html#customizing-the-syntax
+     * @see https://twig.symfony.com/doc/3.x/recipes.html#customizing-the-syntax
      * Example: Smarty-like syntax
      * array(
      *     'tag_comment'  => array('{*', '*}'),
@@ -81,7 +81,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
 
         $this->_paths[] = $app->getBasePath();
 
-        $loader = new Twig_Loader_Filesystem($this->_paths);
+        $loader = new \Twig\Loader\FilesystemLoader($this->_paths);
 
         $defaultOptions = array(
             'autoescape' => false, // false because other way Twig escapes all HTML in templates
@@ -89,7 +89,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
             'cache' => $app->getRuntimePath() . '/twig_cache/',
             'charset' => $app->charset,
         );
-        $this->_twig = new Twig_Environment($loader, array_merge($defaultOptions, $this->options));
+        $this->_twig = new \Twig\Environment($loader, array_merge($defaultOptions, $this->options));
 
         // Adding Yii::app() object to globals
         $this->_twig->addGlobal('App', $app);
@@ -99,7 +99,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
 
         // Adding global 'void' function (usage: {{void(App.clientScript.registerScriptFile(...))}})
         // (@see ETwigViewRendererVoidFunction below for details)
-        $this->_twig->addFunction(new Twig_SimpleFunction('void', 'ETwigViewRendererVoidFunction'));
+        $this->_twig->addFunction(new \Twig\TwigFunction('void', 'ETwigViewRendererVoidFunction'));
 
         // Adding custom globals (objects or static classes)
         if (!empty($this->globals)) {
@@ -147,7 +147,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
                 break;
             }
         }
-        $template = $this->_twig->loadTemplate($sourceFile)->render($data);
+        $template = $this->_twig->render($sourceFile, $data);
 
         if ($return) {
             return $template;
