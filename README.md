@@ -1,6 +1,6 @@
 # Twig view renderer
 
-[![Build](https://api.travis-ci.com/vintagesucks/twig-renderer.svg?branch=master)](https://travis-ci.com/vintagesucks/twig-renderer) [![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/) [![Packagist](https://img.shields.io/packagist/v/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer) [![Packagist](https://img.shields.io/packagist/dt/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer)
+[![Build Status](https://github.com/vintagesucks/twig-renderer/workflows/Build/badge.svg)](https://github.com/vintagesucks/twig-renderer/actions) [![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/) [![Packagist](https://img.shields.io/packagist/v/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer) [![Packagist](https://img.shields.io/packagist/dt/vintagesucks/twig-renderer.svg)](https://packagist.org/packages/vintagesucks/twig-renderer)
 
 This extension allows you to use [Twig 3.x](https://twig.symfony.com/) templates in Yii 1
 
