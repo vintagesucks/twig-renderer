@@ -9,10 +9,10 @@ jobs:
       matrix:
         php-versions: 
           - 7.2
-          - 7.3
-          - 7.4
-          - 8.0
-          - 8.1
+        #   - 7.3
+        #   - 7.4
+        #   - 8.0
+        #   - 8.1
     name: PHP ${{ matrix.php-versions }}
     steps:
       - name: Checkout
@@ -57,6 +57,9 @@ jobs:
 
       - name: Run test
         run: cd test && php index.php > index.html
+
+      - name: (debug) pwd
+        run: pwd
 
       - name: Validate test result
         run: php -r "if (file_get_contents('index.html') !== \"HELLO WORLD\n\") { throw new Exception(file_get_contents('index.html')); };"
