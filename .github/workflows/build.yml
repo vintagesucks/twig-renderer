@@ -1,0 +1,62 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: 
+          - 7.2
+          - 7.3
+          - 7.4
+          - 8.0
+          - 8.1
+    name: PHP ${{ matrix.php-versions }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: json
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3.0.2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Lint ETwigViewRenderer.php
+        run: php -l "ETwigViewRenderer.php"
+
+      - name: Copy composer.json
+        run: php -r "copy('composer.json', 'test/composer.json');"
+
+      - name: Install dependencies
+        run: composer update -d ./test
+
+      - name: Prepare vendor directory
+        run: php -r "if (!is_dir ('./test/vendor/vintagesucks')) { mkdir('./test/vendor/vintagesucks', 0755, true); }"
+
+      - name: Prepare package directory
+        run: php -r "if (!is_dir ('./test/vendor/vintagesucks/twig-renderer')) { mkdir('./test/vendor/vintagesucks/twig-renderer', 0755, true); }"
+
+      - name: Copy ETwigViewRenderer.php
+        run:  php -r "copy('ETwigViewRenderer.php', 'test/vendor/vintagesucks/twig-renderer/ETwigViewRenderer.php');"
+
+      - name: Run test
+        run: cd test && php index.php > index.html
+
+      - name: Validate test result
+        run: php -r "if (file_get_contents('index.html') !== 'HELLO WORLD') { throw new Exception(file_get_contents('index.html')); };"

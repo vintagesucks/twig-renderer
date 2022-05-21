@@ -1,3 +1,8 @@
+3.0.1
+------
+
+- Move tests from Travis CI to GitHub Actions
+
 3.0.0
 ------
 
