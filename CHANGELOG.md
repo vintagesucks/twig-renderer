@@ -1,6 +1,7 @@
 3.0.1
 ------
 
+- Fixed twig version in package description
 - Move tests from Travis CI to GitHub Actions
 
 3.0.0
