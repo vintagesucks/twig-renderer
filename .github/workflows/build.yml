@@ -47,13 +47,13 @@ jobs:
         run: composer update -d ./test
 
       - name: Prepare vendor directory
-        run: php -r "if (\!is_dir ('./test/vendor/vintagesucks')) { mkdir('./test/vendor/vintagesucks', 0755, true); }"
+        run: php -r 'if (!is_dir ("./test/vendor/vintagesucks")) { mkdir("./test/vendor/vintagesucks", 0755, true); }'
 
       - name: Prepare package directory
-        run: php -r "if (\!is_dir ('./test/vendor/vintagesucks/twig-renderer')) { mkdir('./test/vendor/vintagesucks/twig-renderer', 0755, true); }"
+        run: php -r 'if (!is_dir ("./test/vendor/vintagesucks/twig-renderer")) { mkdir("./test/vendor/vintagesucks/twig-renderer", 0755, true); }'
 
       - name: Copy ETwigViewRenderer.php
-        run:  php -r "copy('ETwigViewRenderer.php', 'test/vendor/vintagesucks/twig-renderer/ETwigViewRenderer.php');"
+        run: php -r "copy('ETwigViewRenderer.php', 'test/vendor/vintagesucks/twig-renderer/ETwigViewRenderer.php');"
 
       - name: Run test
         run: cd test && php index.php > index.html
