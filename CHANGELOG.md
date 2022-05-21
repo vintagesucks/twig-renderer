@@ -3,6 +3,9 @@
 
 - Fixed twig version in package description
 - Move tests from Travis CI to GitHub Actions
+- Add Dependabot Badge
+- Create Dependabot config file
+- Use 3.x for twig docs url
 
 3.0.0
 ------
