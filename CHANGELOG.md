@@ -1,3 +1,8 @@
+Unreleased
+----------
+
+- Add PHP 8.2 to test matrix (@vintagesucks)
+
 3.0.2
 ------
 
