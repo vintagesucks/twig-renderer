@@ -205,13 +205,13 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
      */
     public function setLexerOptions($options)
     {
-        $lexer = new Twig_Lexer($this->_twig, $options);
+        $lexer = new Twig\Lexer($this->_twig, $options);
         $this->_twig->setLexer($lexer);
     }
 
     /**
      * Returns Twig object
-     * @return Twig_Environment
+     * @return Twig\Environment
      */
     public function getTwig()
     {
@@ -226,7 +226,7 @@ class ETwigViewRenderer extends CApplicationComponent implements IViewRenderer
      */
     private function _addCustom($classType, $elements)
     {
-        $classFunction = 'Twig_Simple' . $classType;
+        $classFunction = '\Twig\Twig' . $classType;
 
         foreach ($elements as $name => $func) {
             $twigElement = null;
