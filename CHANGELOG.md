@@ -1,3 +1,9 @@
+3.0.2
+------
+
+- Fix wrong class names (@lapiudevgit)
+- actions: allow manual workflow dispatch (@vintagesucks)
+
 3.0.1
 ------
 
