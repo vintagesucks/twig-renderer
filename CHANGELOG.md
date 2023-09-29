@@ -1,6 +1,7 @@
 Unreleased
 ----------
 
+- Bump actions/checkout from 3 to 4 (@dependabot)
 - Add PHP 8.3 to test matrix (@vintagesucks)
 - Add PHP 8.2 to test matrix (@vintagesucks)
 
