@@ -1,6 +1,7 @@
 Unreleased
 ----------
 
+- Bump actions/checkout from 4 to 6 (@dependabot)
 - Add PHP 8.5 to test matrix (@vintagesucks)
 - pin actions to commit SHA (@vintagesucks)
 - reduce dependabot update frequency (@vintagesucks)
