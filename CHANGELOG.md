@@ -1,6 +1,7 @@
 Unreleased
 ----------
 
+- Add PHP 8.5 to test matrix (@vintagesucks)
 - pin actions to commit SHA (@vintagesucks)
 - reduce dependabot update frequency (@vintagesucks)
 - Add PHP 8.4 to test matrix (@vintagesucks)
