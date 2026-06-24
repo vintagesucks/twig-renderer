@@ -1,6 +1,7 @@
 Unreleased
 ----------
 
+- CI: allow security-flagged versions (@vintagesucks)
 - Add PHP 8.5 to test matrix (@vintagesucks)
 - pin actions to commit SHA (@vintagesucks)
 - reduce dependabot update frequency (@vintagesucks)
